@@ -47,6 +47,7 @@ body {
     backface-visibility: hidden;
 }
 
+/* Carta da frente (visível quando virada para frente) */
 .card-front {
     display: flex;
     justify-content: center;
@@ -54,13 +55,17 @@ body {
     background-color: #f0ad4e;
     font-size: 2rem;
     color: white;
+    transform: rotateY(0deg);
 }
 
+/* Carta de trás (visível quando virada para baixo) */
 .card-back {
     background-color: #0275d8;
+    transform: rotateY(180deg);
 }
 
-.card:active {
+/* Quando a carta é virada, inverte a rotação */
+.card.flipped {
     transform: rotateY(180deg);
 }
 
@@ -74,3 +79,4 @@ body {
     margin-top: 10px;
     color: green;
 }
+
